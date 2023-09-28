@@ -1,5 +1,8 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
+import Navbar from './Navbar/Navbar.jsx'
+import Hero from './Hero/Hero.jsx'
+import Features from './Features/Features.jsx'
 
 function Home() {
 
@@ -12,7 +15,12 @@ function Home() {
 
   return (
     <div>
-      HOME PAGE
+      
+      <Navbar/>
+      
+      <Hero/>
+      
+      <Features/>
       
       <button onClick={() => {
           setGoToDash(true);

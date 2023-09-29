@@ -1,33 +1,22 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
-import Navbar from './Navbar/Navbar.jsx'
-import Hero from './Hero/Hero.jsx'
-import Features from './Features/Features.jsx'
+import Navbar from './Navbar/Navbar.jsx';
+import Hero from './Hero/Hero.jsx';
+import Features from './Features/Features.jsx';
+import Footer from './Footer/Footer.jsx';
+
+
 
 function Home() {
 
-  const [goToDash, setGoToDash] = React.useState(false);
-
-  if (goToDash) {
-    return <Navigate to="/dashboard" />;
-  }
-  
-
   return (
     <div>
-      
+    
       <Navbar/>
       
       <Hero/>
       
       <Features/>
-      
-      <button onClick={() => {
-          setGoToDash(true);
-        }}>
-          
-        Go to the page
-      </button>
+      <Footer/>
+     
       
     </div>
   );

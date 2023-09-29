@@ -3,9 +3,14 @@ import Home from "./Components/Home";
 import Dashboard from "./Components/Dashboard";
 import '@mantine/core/styles.css';
 import { MantineProvider, createTheme } from '@mantine/core';
+import React from "react";
+
 
 function App() {
- 
+  
+  
+  
+
   return (
     <MantineProvider defaultColorScheme="dark">
     

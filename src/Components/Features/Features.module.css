@@ -47,16 +47,19 @@ const useStyles = createStyles((theme) => ({
   font-size: rem(34px);
   font-weight: 900;
 
-  @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(24px);
-  }
 }
+@media (max-width: 48em) {
+  .title{ 
+  font-size: rem(24px);
+}
+}
+
 
 .description {
   max-width: rem(600px);
-  margin: auto;
-
-  &::after {
+  margin: auto !important;
+}
+  .description:after {
     content: '';
     display: block;
     background-color: var(--mantine-color-blue-filled);
@@ -66,14 +69,13 @@ const useStyles = createStyles((theme) => ({
     margin-left: auto;
     margin-right: auto;
   }
-}
+
 
 .card {
   border: rem(1px) solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
 }
 
-.cardTitle {
-  &::after {
+.cardTitle:after {
     content: '';
     display: block;
     background-color: var(--mantine-color-blue-filled);
@@ -81,4 +83,3 @@ const useStyles = createStyles((theme) => ({
     height: rem(2px);
     margin-top: var(--mantine-spacing-sm);
   }
-}

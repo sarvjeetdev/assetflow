@@ -1,35 +1,38 @@
 import {
-    HoverCard,
-    Group,
-    Button,
-    UnstyledButton,
-    Text,
-    SimpleGrid,
-    ThemeIcon,
-    Anchor,
-    Divider,
-    Center,
-    Box,
-    Burger,
-    Drawer,
-    Collapse,
-    ScrollArea,
-    rem,
-    useMantineTheme,
-  } from '@mantine/core';
-  import { MantineLogo } from '@mantine/ds';
-  import { useDisclosure } from '@mantine/hooks';
-  import {
-    IconNotification,
-    IconCode,
-    IconBook,
-    IconChartPie3,
-    IconFingerprint,
-    IconCoin,
-    IconChevronDown,
-  } from '@tabler/icons-react';
-  import classes from "./Navbar.module.css";
-  
+  HoverCard,
+  Group,
+  Button,
+  UnstyledButton,
+  Text,
+  SimpleGrid,
+  ThemeIcon,
+  Anchor,
+  Divider,
+  Center,
+  Box,
+  Burger,
+  Drawer,
+  Collapse,
+  ScrollArea,
+  rem,
+  useMantineTheme,
+} from '@mantine/core';
+import { MantineLogo } from '@mantine/ds';
+import { useDisclosure } from '@mantine/hooks';
+import {
+  IconNotification,
+  IconCode,
+  IconBook,
+  IconChartPie3,
+  IconFingerprint,
+  IconCoin,
+  IconChevronDown,
+} from '@tabler/icons-react';
+import classes from "./Navbar.module.css";
+import React from "react";
+import { Navigate } from "react-router-dom";
+import Theme from "../Theme/Theme.jsx"
+
   const mockdata = [
     {
       icon: IconCode,
@@ -85,6 +88,12 @@ import {
         </Group>
       </UnstyledButton>
     ));
+    const [goToDash, setGoToDash] = React.useState(false);
+
+  if (goToDash) {
+    return <Navigate to="/dashboard" />;
+  }
+  
   
     return (
       <Box pb={120}>
@@ -147,10 +156,14 @@ import {
                 Academy
               </a>
             </Group>
+
   
             <Group visibleFrom="sm">
-              <Button variant="default">Log in</Button>
-              <Button>Sign up</Button>
+              <Button onClick={() => {setGoToDash(true);}} variant="default">Log in</Button>
+              <Button onClick={() => {setGoToDash(true);}} >Sign up</Button>
+              <Theme />
+          
+      
             </Group>
   
             <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -196,6 +209,7 @@ import {
             <Group justify="center" grow pb="xl" px="md">
               <Button variant="default">Log in</Button>
               <Button>Sign up</Button>
+              <Theme />
             </Group>
           </ScrollArea>
         </Drawer>

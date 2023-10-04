@@ -1,24 +1,13 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import Sidebar from '../Sidebar/Sidebar'
 
-
-function Layout() {
-
+export default function Layout(props) {
+  const { children } = props
   return (
+      <div>
+          <Sidebar />
     
-            <Routes>
-              
-                  <Route
-                    key={1}
-                    exact={true}
-                    path={`/app/Noti`}
-                  />
-            
-              <Redirect exact from="/app" to="/app/dashboard" />
-              
-            </Routes>
-          
+          {children}
+      </div>
   )
 }
-
-export default Layout

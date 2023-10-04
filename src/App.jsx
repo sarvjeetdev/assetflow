@@ -4,7 +4,6 @@ import Dashboard from "./Components/Dashboard";
 import '@mantine/core/styles.css';
 import { MantineProvider, createTheme } from '@mantine/core';
 import React from "react";
-import Layout from "./Components/Layout/Layout.jsx";
 
 function App() {
   
@@ -19,8 +18,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/app" component={Layout} />
+          <Route path="/dashboard/*" element={<Dashboard />} />
+
         </Routes>
       </Router>
     </div>

@@ -13,6 +13,7 @@ export default function Stats() {
     const DiffIcon = stat.diff > 0 ? IconArrowUpRight : IconArrowDownRight;
 
     return (
+      <>   
       <Paper withBorder p="md" radius="md" key={stat.title}>
         <Group justify="apart">
           <div>
@@ -42,11 +43,12 @@ export default function Stats() {
           {stat.diff > 0 ? 'increase' : 'decrease'} compared to last month
         </Text>
       </Paper>
+      </>
     );
   });
 
   return (
-    <div className={classes.root}>
+    <div className={classes.stats}>
       <SimpleGrid cols={{ base: 1, sm: 3 }}>{stats}</SimpleGrid>
     </div>
   );

@@ -32,13 +32,13 @@ function NavbarLink({ icon: Icon, label, active, onClick }) {
 }
 
 const mockdata = [
-  { icon: IconHome2, label: "Home", link:"/dashboard/stats" },
+  { icon: IconHome2, label: "Home", link:"/dashboard/home" },
   { icon: IconGauge, label: "Dashboard", link:"/dashboard/cards" },
-  { icon: IconDeviceDesktopAnalytics, label: "Analytics", link:"/stats" },
-  { icon: IconCalendarStats, label: "Releases", link:"/stats" },
-  { icon: IconUser, label: "Account", link:"/stats" },
-  { icon: IconFingerprint, label: "Security", link:"/stats" },
-  { icon: IconSettings, label: "Settings", link:"/stats" }
+  { icon: IconDeviceDesktopAnalytics, label: "Analytics", link:"/dashboard/history" },
+  { icon: IconCalendarStats, label: "Releases", link:"/dashboard/cards" },
+  { icon: IconUser, label: "Account", link:"/dashboard/cards" },
+  { icon: IconFingerprint, label: "Security", link:"/dashboard/cards" },
+  { icon: IconSettings, label: "Settings", link:"/dashboard/cards" }
 ]
 
 export default function Sidebar() {

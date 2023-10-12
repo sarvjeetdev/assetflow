@@ -91,7 +91,7 @@ import Theme from "../Theme/Theme.jsx"
     const [goToDash, setGoToDash] = React.useState(false);
 
   if (goToDash) {
-    return <Navigate to="/dashboard/stats" />;
+    return <Navigate to="/dashboard/home"/>;
   }
   
   

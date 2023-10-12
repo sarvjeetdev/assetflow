@@ -24,6 +24,7 @@
     "@mantine/nprogress": "^7.1.0",
     "@mantine/spotlight": "^7.1.0",
     "@mantine/tiptap": "^7.1.0",
+    "@mui/icons-material": "^5.14.13",
     "@tabler/icons-react": "^2.36.0",
     "@tiptap/extension-link": "^2.1.11",
     "@tiptap/react": "^2.1.11",
@@ -32,7 +33,9 @@
     "embla-carousel-react": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.16.0"
+    "react-router-dom": "^6.16.0",
+    "react-super-responsive-table": "^5.2.2",
+    "react-tabulator": "^0.19.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

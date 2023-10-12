@@ -5,3 +5,11 @@
   .label {
     font-family: Greycliff CF, var(--mantine-font-family);
   }
+
+  .transaction {
+    margin-bottom: 2em !important;
+  }
+
+  h3  {
+   text-align: center;
+  }

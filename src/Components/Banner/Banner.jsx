@@ -2,7 +2,6 @@ import { Container, Text, Button, Group } from '@mantine/core';
 import { GithubIcon } from '@mantine/ds';
 import classes from './Banner.module.css';
 import ExtraCard from '../ExtraCard/ExtraCard'
-import Transaction from '../Transaction/Transaction.jsx'
 
 
 export default function Banner() {

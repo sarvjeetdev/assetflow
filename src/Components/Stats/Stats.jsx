@@ -1,6 +1,9 @@
 import { Group, Paper, Text, ThemeIcon, SimpleGrid } from '@mantine/core';
 import { IconArrowUpRight, IconArrowDownRight } from '@tabler/icons-react';
 import classes from './Stats.module.css';
+import Transaction from '../Transaction/Transaction';
+import { Container} from '@mantine/core';
+
 
 const data = [
   { title: 'Revenue', value: '$13,456', diff: 34 },
@@ -51,8 +54,16 @@ export default function Stats() {
   });
 
   return (
+    <>
     <div className={classes.stats}>
       <SimpleGrid cols={{ base: 1, sm: 3 }}>{stats}</SimpleGrid>
+      
     </div>
+      <Container> 
+      <h3 > Recent transactions.</h3>
+        <Transaction/> 
+      </Container>
+        
+    </>
   );
 }

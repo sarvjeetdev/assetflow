@@ -13,7 +13,7 @@ export default function Dashboard() {
         <Routes>  
             <Route path="/home" Component={Banner}/>
             <Route path="/cards" Component={Stats}/>
-         
+            <Route path="/history" Component={History}/>
         </Routes>
         </Layout>
       

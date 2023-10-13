@@ -20,6 +20,7 @@ export default function Stats() {
 
     return (
       <>   
+      
       <Paper withBorder p="md" radius="md" key={stat.title}>
         <Group justify="apart">
           <div>
@@ -55,12 +56,13 @@ export default function Stats() {
 
   return (
     <>
+    <h2>Current Month Analysis</h2> 
     <div className={classes.stats}>
       <SimpleGrid cols={{ base: 1, sm: 3 }}>{stats}</SimpleGrid>
       
     </div>
       <Container> 
-      <h3 > Recent transactions.</h3>
+      <h3 > Recent transactions</h3>
         <Transaction/> 
       </Container>
         

@@ -57,7 +57,10 @@ export default function Transaction() {
     );
   });
   return (
-    <div>{rows}</div>
+    <> 
+    
+    <div clas>{rows}</div>
+    </>
   );
 }
 

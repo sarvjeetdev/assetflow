@@ -1,0 +1,17 @@
+.Auth {
+    
+    height: 100% !important;
+    padding: 4vw;
+    width: 50%;
+    margin: auto;
+
+}
+
+@media (max-width: 48em) {
+    .Auth {
+        width: 92%;
+  }
+  .textInv {
+    display: none;
+}
+}

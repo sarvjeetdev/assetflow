@@ -1,10 +1,18 @@
-import { Container, Text, Button, Group } from '@mantine/core';
+import { Container, Text, Button, Group, TextInput,Select} from '@mantine/core';
 import { GithubIcon } from '@mantine/ds';
 import classes from './Banner.module.css';
 import ExtraCard from '../ExtraCard/ExtraCard'
+import { useState } from 'react';
+
+
+
+
 
 
 export default function Banner() {
+  const [focused, setFocused] = useState(false);
+  const [Amount, setAmount] = useState('');
+  const category = ['React', 'Angular', 'Svelte', 'Vue']
   return (
     <div className={classes.wrapper}>
       <Container size={700} className={classes.inner}>
@@ -30,29 +38,67 @@ export default function Banner() {
 
           <Button
             component="a"
-            href="https://github.com/mantinedev/mantine"
+           
             size="xl"
             variant="default"
             className={classes.control}
-            leftSection={<GithubIcon size={20} />}
+            href='#record'
+            
           >
-            GitHub
+            Record
           </Button>
 
           
           
+          
         </Group>
-       <div id='target'> 
-       <ExtraCard className="target2"/>
+       <div className={classes.target}>
+      
+       <ExtraCard className={classes.target2}/>
+       
+       
+       <div className={classes.Record}> 
+       <h2><Text id="record" component="span" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }} inherit size='xl'> Record Form </Text></h2>
+       <TextInput
+        placeholder="Amount"
+        type="number"
+        required  
+        value={Amount}
+        onChange={(event) => setAmount(event.currentTarget.Amount)}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+       />
+      
+      <Select
+        mt="md"
+        comboboxProps={{ withinPortal: true }}
+        data={category}
+        placeholder="Category"
+        
+        classNames={classes}
+      />
+      <Button
+          
+           
+            size="sm"
+  
+            className={classes.submitButton}
+            
+          >
+            Record
+          </Button>
+
+      </div>
+       
        </div>
       
 
      
 
 
-
       
       </Container>
+      
 
 
       

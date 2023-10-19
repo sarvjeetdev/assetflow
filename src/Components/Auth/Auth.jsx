@@ -16,9 +16,19 @@ import { GoogleButton } from "./GoogleButton"
 import { TwitterButton } from "./TwitterButton"
 import { Container} from '@mantine/core';
 import classes from './Auth.module.css';
+import React from "react"
+import { Navigate } from "react-router-dom";
+
+
+
+
+
 
 
 export function Auth(props) {
+  const [goToDash, setGoToDash] = React.useState(false);
+
+  
   const [type, toggle] = useToggle(["login", "register"])
   const form = useForm({
     initialValues: {
@@ -29,12 +39,14 @@ export function Auth(props) {
     },
 
     validate: {
-      email: val => (/^\S+@\S+$/.test(val) ? null : "Invalid email"),
+      email: val => (/^\S+@\S+$/.test(val.trim()) ? null : "Invalid email"),
       password: val =>
         val.length <= 6 ? "Password should include at least 6 characters" : null
     }
   })
-
+  if (goToDash) {
+    return <Navigate to="/dashboard/home"/>;
+  }
   return (
     <div className={classes.Auth}>
     <Paper radius="md" p="xl" withBorder {...props}>
@@ -49,7 +61,7 @@ export function Auth(props) {
 
       <Divider label="Or continue with email" labelPosition="center" my="lg" />
 
-      <form onSubmit={form.onSubmit(() => {})}>
+      <form onSubmit={form.onSubmit(() => {setGoToDash(true)})}>
         <Stack>
           {type === "register" && (
             <TextInput

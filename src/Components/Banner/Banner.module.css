@@ -77,15 +77,36 @@
             padding-top: rem(80px);
           }
 }
-  #target{ 
+  .target{ 
     position: relative;
 
     border: 400em !important;
     
+
+
+
   }
+
+
+
 .target2{ 
   
 
+  margin-top: 2em;
+  
+}
+
+
+.Record { 
+  
+
+  margin-top: 20em;
+  
+}
+
+.submitButton { 
+  
+  align-self: center;
   margin-top: 2em;
   
 }

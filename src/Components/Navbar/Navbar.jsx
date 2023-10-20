@@ -105,7 +105,7 @@ import Theme from "../Theme/Theme.jsx"
               <a href="#" className={classes.link}>
                 Home
               </a>
-              <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
+             {/* <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
                 <HoverCard.Target>
                   <a href="#" className={classes.link}>
                     <Center inline>
@@ -118,7 +118,7 @@ import Theme from "../Theme/Theme.jsx"
                       />
                     </Center>
                   </a>
-                </HoverCard.Target>
+    </HoverCard.Target>
   
                 <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
                   <Group justify="space-between" px="md">
@@ -148,19 +148,19 @@ import Theme from "../Theme/Theme.jsx"
                     </Group>
                   </div>
                 </HoverCard.Dropdown>
-              </HoverCard>
+              </HoverCard>*/}
               <a href="#" className={classes.link}>
-                Learn
+                Features
               </a>
               <a href="#" className={classes.link}>
-                Academy
+                About
               </a>
             </Group>
 
   
             <Group visibleFrom="sm">
-              <Button onClick={() => {setGoToDash(true);}} variant="default">Log in</Button>
-              <Button onClick={() => {setGoToDash(true);}} >Sign up</Button>
+              <Button onClick={() => {setGoToDash(true);}} variant="default">Log In</Button>
+              {/*<Button onClick={() => {setGoToDash(true);}} >Sign up</Button>*/}
               <Theme />
           
       
@@ -175,7 +175,7 @@ import Theme from "../Theme/Theme.jsx"
           onClose={closeDrawer}
           size="100%"
           padding="md"
-          title="Navigation"
+          title="Assets Flow"
           hiddenFrom="sm"
           zIndex={1000000}
         >
@@ -185,7 +185,7 @@ import Theme from "../Theme/Theme.jsx"
             <a href="#" className={classes.link}>
               Home
             </a>
-            <UnstyledButton className={classes.link} onClick={toggleLinks}>
+            {/*<UnstyledButton className={classes.link} onClick={toggleLinks}>
               <Center inline>
                 <Box component="span" mr={5}>
                   Features
@@ -196,19 +196,19 @@ import Theme from "../Theme/Theme.jsx"
                 />
               </Center>
             </UnstyledButton>
-            <Collapse in={linksOpened}>{links}</Collapse>
+            <Collapse in={linksOpened}>{links}</Collapse>*/}
             <a href="#" className={classes.link}>
-              Learn
+              Features
             </a>
             <a href="#" className={classes.link}>
-              Academy
+              About
             </a>
   
             <Divider my="sm" />
   
             <Group justify="center" grow pb="xl" px="md">
-              <Button variant="default">Log in</Button>
-              <Button>Sign up</Button>
+              <Button variant="default" onClick={() => {setGoToDash(true);}}>Log in</Button>
+              
               <Theme />
             </Group>
           </ScrollArea>

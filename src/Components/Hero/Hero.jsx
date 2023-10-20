@@ -2,18 +2,28 @@ import { Image, Container, Title, Button, Group, Text, List, ThemeIcon, rem } fr
 import { IconCheck } from '@tabler/icons-react';
 import image from '/image.svg';
 import classes from './Hero.module.css';
+import React from 'react';
+import { Navigate } from "react-router-dom";
 
 export default function Hero() {
+  const [goToLogin, setGoToLogin] = React.useState(false);
+
+  if (goToLogin) {
+    return <Navigate to="/login"/>;
+  }
+  
   return (
     <Container size="md">
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
-            A <span className={classes.highlight}>modern</span> React <br /> components library
+          Master Your Finances with <span className={classes.highlight}>Assets Flow </span>
           </Title>
           <Text c="dimmed" mt="md">
-            Build fully functional accessible web applications faster than ever – Mantine includes
-            more than 120 customizable components and hooks to cover you in any situation
+          Tired of losing track of your finances? With Assets Flow, managing your money becomes a breeze. 
+          With our user-friendly platform say goodbye to financial stress and hello to financial clarity!
+
+
           </Text>
 
           <List
@@ -27,26 +37,23 @@ export default function Hero() {
             }
           >
             <List.Item>
-              <b>TypeScript based</b> – build type safe applications, all components and hooks
-              export types
+              <b>Visualize Your Financial Progress</b> – Keep track of your savings not only expenses.
             </List.Item>
             <List.Item>
-              <b>Free and open source</b> – all packages have MIT license, you can use Mantine in
-              any project
+              <b>Track Every Penny with Ease</b> – Record cash and cashless expenses.
             </List.Item>
             <List.Item>
-              <b>No annoying focus ring</b> – focus ring will appear only when user navigates with
-              keyboard
+              <b> Customize Your Financial Universe </b> – Harmonize Your Spending Across All Life's Essentials.
             </List.Item>
           </List>
 
           <Group mt={30}>
-            <Button radius="xl" size="md" className={classes.control}>
+            <Button onClick={() => {setGoToLogin(true);}} radius="xl" size="md" className={classes.control} >
               Get started
             </Button>
-            <Button variant="default" radius="xl" size="md" className={classes.control}>
+            {/*<Button variant="default" radius="xl" size="md" className={classes.control}>
               Source code
-            </Button>
+          </Button> */}
           </Group>
         </div>
         <Image src={image} className={classes.image} />

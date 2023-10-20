@@ -51,7 +51,7 @@ export function Auth(props) {
     <div className={classes.Auth}>
     <Paper radius="md" p="xl" withBorder {...props}>
       <Text size="lg" fw={500}>
-        Welcome to Mantine, {type} with
+        Welcome to Asset Flow, {type} with
       </Text>
 
       <Group grow mb="md" mt="md">

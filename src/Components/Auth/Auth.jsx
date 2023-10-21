@@ -24,10 +24,9 @@ import { Navigate } from "react-router-dom";
 
 
 
-
 export function Auth(props) {
   const [goToDash, setGoToDash] = React.useState(false);
-
+  const [goToBack, setGoToBack] = React.useState(false);
   
   const [type, toggle] = useToggle(["login", "register"])
   const form = useForm({
@@ -46,6 +45,9 @@ export function Auth(props) {
   })
   if (goToDash) {
     return <Navigate to="/dashboard/home"/>;
+  }
+  if (goToBack) {
+    return <Navigate to="/"/>;
   }
   return (
     <div className={classes.Auth}>
@@ -130,6 +132,7 @@ export function Auth(props) {
           </Button>
         </Group>
       </form>
+      <Button onClick={()=>{setGoToBack(true)}}>Go Back</Button>
     </Paper>
     </div>
   )

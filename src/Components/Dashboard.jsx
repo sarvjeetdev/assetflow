@@ -5,6 +5,9 @@ import ExtraCard from '../Components/ExtraCard/ExtraCard'
 import My from '../Components/My/My.jsx'
 import History from '../Components/History/History.jsx'
 import Banner from '../Components/Banner/Banner.jsx'
+import Account from '../Components/Account/Account.jsx'
+
+
 
 export default function Dashboard() {
     return (
@@ -14,6 +17,7 @@ export default function Dashboard() {
             <Route path="/home" Component={Banner}/>
             <Route path="/cards" Component={Stats}/>
             <Route path="/history" Component={History}/>
+            <Route path="/account" Component={Account}/>
         </Routes>
         </Layout>
       

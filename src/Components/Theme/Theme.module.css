@@ -1,6 +1,7 @@
 .icon {
     width: rem(22px);
     height: rem(22px);
+    border: none;
   }
   
   .dark {
@@ -21,4 +22,10 @@
     @mixin dark {
       display: block;
     }
+  }
+
+
+  .BorderClass {
+    border: none !important; 
+    background: none !important;
   }

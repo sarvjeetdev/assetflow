@@ -12,7 +12,7 @@ import { useState } from 'react';
 export default function Banner() {
   const [focused, setFocused] = useState(false);
   const [Amount, setAmount] = useState('');
-  const category = ['React', 'Angular', 'Svelte', 'Vue']
+  const category = ['Food', 'Travel', 'Grocery', 'Other']
   return (
     <div className={classes.wrapper}>
       <Container size={700} className={classes.inner}>
@@ -21,7 +21,7 @@ export default function Banner() {
           <Text component="span" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }} inherit>
             fully featured
           </Text>{' '}
-          React components and hooks library
+          Asset Management Tool
         </h1>
 
         
@@ -45,7 +45,7 @@ export default function Banner() {
             href='#record'
             
           >
-            Record
+            Add Transaction
           </Button>
 
           
@@ -58,7 +58,7 @@ export default function Banner() {
        
        
        <div className={classes.Record}> 
-       <h2><Text id="record" component="span" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }} inherit size='xl'> Record Form </Text></h2>
+       <h2><Text id="record" component="span" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }} inherit size='xl'> Add Transaction </Text></h2>
        <TextInput
         placeholder="Amount"
         type="number"

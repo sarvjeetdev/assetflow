@@ -4,38 +4,15 @@ import { Text, Progress, Card } from '@mantine/core';
 export default function Transaction() {
   const data = [
     {
-      title: 'Foundation',
+      title: 'Food',
       author: 'Isaac Asimov',
-      year: 1951,
+      year: 2500,
       reviews: { positive: 2223, negative: 259 },
     },
     {
-      title: 'Frankenstein',
+      title: 'Travel',
       author: 'Mary Shelley',
-      year: 1818,
-      reviews: { positive: 5677, negative: 1265 },
-    },
-    {
-      title: 'Foundation',
-      author: 'Isaac Asimov',
-      year: 1951,
-      reviews: { positive: 2223, negative: 259 },
-    },
-    {
-      title: 'Frankenstein',
-      author: 'Mary Shelley',
-      year: 1818,
-      reviews: { positive: 5677, negative: 1265 },
-    },{
-      title: 'Foundation',
-      author: 'Isaac Asimov',
-      year: 1951,
-      reviews: { positive: 2223, negative: 259 },
-    },
-    {
-      title: 'Frankenstein',
-      author: 'Mary Shelley',
-      year: 1818,
+      year: 1000,
       reviews: { positive: 5677, negative: 1265 },
     },
     

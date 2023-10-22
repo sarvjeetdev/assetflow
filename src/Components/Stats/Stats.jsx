@@ -1,4 +1,4 @@
-import { Group, Paper, Text, ThemeIcon, SimpleGrid } from '@mantine/core';
+import { Group, Paper, Text, ThemeIcon, SimpleGrid, Button} from '@mantine/core';
 import { IconArrowUpRight, IconArrowDownRight } from '@tabler/icons-react';
 import classes from './Stats.module.css';
 import Transaction from '../Transaction/Transaction';
@@ -6,12 +6,12 @@ import { Container} from '@mantine/core';
 
 
 const data = [
-  { title: 'Revenue', value: '$13,456', diff: 34 },
-  { title: 'Profit', value: '$4,145', diff: -13 },
-  { title: 'Coupons usage', value: '745', diff: 18 },
-  { title: 'Revenue', value: '$13,456', diff: 34 },
-  { title: 'Profit', value: '$4,145', diff: -13 },
-  { title: 'Coupons usage', value: '745', diff: 18 },
+  { title: 'Food', value: '$13,456', diff: 34 },
+  { title: 'Rent', value: '$4,145', diff: -13 },
+  { title: 'Travel', value: '$745', diff: 18 },
+  { title: 'Alcohol', value: '$130,456', diff: 200 },
+  { title: 'Drugs', value: '$4,145', diff: -13 },
+  { title: 'Others', value: '$745', diff: 18 },
 ];
 
 export default function Stats() {
@@ -57,7 +57,9 @@ export default function Stats() {
   return (
     <>
     <h2>Current Month Analysis</h2> 
+    <h3><Button>Add Category</Button></h3>
     <div className={classes.stats}>
+    
       <SimpleGrid cols={{ base: 1, sm: 3 }}>{stats}</SimpleGrid>
       
     </div>

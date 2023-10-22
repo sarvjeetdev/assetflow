@@ -7,12 +7,12 @@ const icons = {
 };
 
 const data = [
-  { label: 'Page views', stats: '456,578', progress: 65, color: 'teal', icon: 'up' },
-  { label: 'New users', stats: '2,550', progress: 72, color: 'blue', icon: 'up' },
+  { label: 'Savings', stats: '456,578', progress: 100, color: 'teal', icon: 'up' },
+  { label: 'Income', stats: '2,550', progress: 100, color: 'blue', icon: 'up' },
   {
-    label: 'Orders',
+    label: 'Expense',
     stats: '4,735',
-    progress: 52,
+    progress: 100,
     color: 'red',
     icon: 'down',
   },

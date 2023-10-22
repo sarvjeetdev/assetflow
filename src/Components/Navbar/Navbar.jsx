@@ -32,6 +32,8 @@ import classes from "./Navbar.module.css";
 import React from "react";
 import { Navigate } from "react-router-dom";
 import Theme from "../Theme/Theme.jsx"
+import Logo from "../Logo/Logo.jsx"
+
 
   const mockdata = [
     {
@@ -99,7 +101,13 @@ import Theme from "../Theme/Theme.jsx"
       <Box pb={120}>
         <header className={classes.header}>
           <Group justify="space-between" h="100%">
-            <MantineLogo size={30} />
+            
+          <Group  gap={0}>
+          <Logo /> 
+          <Text fw={600} fz="xl"> Asset Flow </Text>
+          
+      
+            </Group>
   
             <Group h="100%" gap={0} visibleFrom="sm">
               <a href="#" className={classes.link}>

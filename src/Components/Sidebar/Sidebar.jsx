@@ -18,7 +18,7 @@ import {Link} from 'react-router-dom'
 import React from 'react'
 import { Navigate } from "react-router-dom";
 import Theme from "../Theme/Theme.jsx"
-
+import Logo from "../Logo/Logo.jsx"
 
 function NavbarLink({ icon: Icon, label, active, onClick }) {
 
@@ -89,7 +89,7 @@ export default function Sidebar() {
   return (
     <nav className={classes.navbar}>
       <Center>
-        <MantineLogo type="mark" size={30} />
+        <Logo type="mark" size={30} />
       </Center>
 
       <div className={classes.navbarMain}>
